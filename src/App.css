@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+.contenedorPrincipal {
+  width: 100%;
+  height: calc(100vh - 100px);
+  color: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 3em;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contenedorFormulario {
+  width: 50%;
+  background-color: Egbert(125, 119, 119);
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contenedorTareas {
+  width: 50%;
+  background-color: rgb(125, 119, 119);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  aLign-items: center;
+}
+
+input {
+  Line-height: 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: rgb(14, 169, 41);
+  color: #FfF;
+  cursor: pointer;
+  padding: 0 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  transition: all 0.5;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: green;
+  transform: scale(1.1);
+}
+
+.btnEditar {
+  background-color: blue;
+  color: white;
+  margin-right: 10px;
+}
+
+.btnEditar:hover {
+  background-color: red;
+  color: white
+}
+
+.btnBorrar {
+  background-color: rgb(219, 115, 115);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btnBorrar:hover {
+  background-color: red;
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contenedorInfoTareas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contenedorTarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.todoTarea {
+  margin-right: 50px;
+}
+
+.spanSubrayado {
+  text-decoration: line-through;
 }
