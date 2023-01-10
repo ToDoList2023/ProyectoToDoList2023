@@ -16,9 +16,24 @@
       "completado": false
     },
     {
-      "id": 4,
-      "tarea": "Resetear el ordenanor hoy mismo",
-      "completado": false
+      "tarea": "Resetear el ordenador",
+      "completado": false,
+      "id": 5
+    },
+    {
+      "tarea": "LLamar a mama",
+      "completado": false,
+      "id": 6
+    },
+    {
+      "tarea": "Limpiar",
+      "completado": false,
+      "id": 7
+    },
+    {
+      "tarea": "Dormir temprano",
+      "completado": false,
+      "id": 8
     }
   ]
 }
