@@ -1,0 +1,24 @@
+{
+    "tareas":
+    [
+    {
+        "id": 0,
+        "tarea": "Ir de compras",
+        "completado": false
+    },
+    {
+        "id": 1,
+        "tarea": "Pasear al perro",
+        "completado": false
+    },
+    {
+        "id": 2,
+        "tarea": "Organizar casa",
+        "completado": false
+    },
+    {
+        "id": 3,
+        "tarea": "Lavar ropa",
+        "completado": false
+    }
+]}
