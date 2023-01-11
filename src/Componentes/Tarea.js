@@ -6,6 +6,8 @@ export function Tarea(props) {
 
     const [editando, setEditando] = useState(false)
 
+    const [estaCompletada, setEstaCompletada] = useState(false)
+
     function ModoEdicionActivado() {
 
         const [valor, setValor] = useState(tarea.tarea)
@@ -54,7 +56,10 @@ export function Tarea(props) {
     function ModoEdicionDesactivado() {
         return(
             <>
-                <span>{tarea.tarea}</span>
+                <span
+                className={estaCompletada ? "todoTarea spanSubrayada" : "todoTarea"}
+                onClick={() => setEstaCompletada(!estaCompletada)}>
+                    {tarea.tarea}</span>
                 <button
                     className='btn btnEditar'
                     onClick={() => setEditando(true)}>
