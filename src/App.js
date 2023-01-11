@@ -1,16 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import {Formulario} from '../src/Componentes/Formulario'
 import {Tarea} from '../src/Componentes/Tarea'
+import {mostrarTareas} from '../src/services/serviceAxios'
 
 function App() {
 
-  const [tarea, setTarea] = useState('')
+  const [tarea, setTarea] = useState({
+    tarea: ""
+  });
   const [listadoTareas, setListadoTareas] = useState ([])
 
-  function handleSubmit(e){
-    e.preventDefault()
+  const obtenerTareas = async () => {
+    const todasLasTareas = await mostrarTareas();
+    setListadoTareas(todasLasTareas)
+  }
 
+  useEffect(() => {
+    obtenerTareas();
+  }, []);
+
+
+  async function handleSubmit(e){
+    e.preventDefault()
+    await obtenerTareas();
+    e.stopPropagation();
+    
     if (tarea === '' ){
       alert('DEBES DE PONER UNA TAREA')
       return
