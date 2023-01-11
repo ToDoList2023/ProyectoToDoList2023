@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import {Formulario} from '../src/Componentes/Formulario'
 import {Tarea} from '../src/Componentes/Tarea'
-import {agregarNuevaTarea, mostrarTareas } from '../src/services/serviceAxios'
+import {agregarNuevaTarea, eliminarTarea, mostrarTareas } from '../src/services/serviceAxios'
 
 function App() {
 
@@ -50,9 +50,9 @@ function handleChange(e){
 
   }
 
-  function onBorrarTarea(id) {
-    const temp = listadoTareas.filter(item => item.id !== id)
-    setListadoTareas(temp)
+  async function onBorrarTarea(id) {
+    await eliminarTarea(id)
+    await obtenerTareas();
   }
 
   return (

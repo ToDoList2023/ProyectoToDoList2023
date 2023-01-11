@@ -24,21 +24,6 @@
       "tarea": "LLamar a mama",
       "completado": false,
       "id": 6
-    },
-    {
-      "tarea": "Limpiar",
-      "completado": false,
-      "id": 7
-    },
-    {
-      "tarea": "Dormir temprano",
-      "completado": false,
-      "id": 8
-    },
-    {
-      "tarea": "Revisar código",
-      "completado": false,
-      "id": 9
     }
   ]
 }
