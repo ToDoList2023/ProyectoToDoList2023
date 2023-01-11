@@ -5,7 +5,7 @@ import {Tarea} from '../src/Componentes/Tarea'
 
 function App() {
 
-  const [tarea, setTarea] =useState('')
+  const [tarea, setTarea] = useState('')
   const [listadoTareas, setListadoTareas] = useState ([])
 
   function handleSubmit(e){
@@ -30,13 +30,13 @@ function App() {
 
   console.log(listadoTareas)
 
-  }
+}
 
-  function handleChange(e){
+function handleChange(e){
     setTarea(e.target.value)
     console.log (tarea)
 
-  }
+}
 
   return (
     <>
@@ -56,9 +56,9 @@ function App() {
             {
               listadoTareas.map(tarea => (
                 <Tarea
-                key={tarea.id}
-                id={tarea.id}
-                tarea={tarea}/>
+                  key={tarea.id}
+                  id={tarea.id}
+                  tarea={tarea}/>
               ))
             }
           </div>

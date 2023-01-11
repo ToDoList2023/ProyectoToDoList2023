@@ -1,11 +1,26 @@
+import { useState } from "react";
+
 export function Tarea(props) {
     
     const{tarea} = props
 
+    const [editando, setEditando] = useState(false)
+
+
+    
     return(
         <>
             <div className='contenedorTarea' id={tarea.id}>
-                <h1>{tarea.tarea}</h1>
+                <span>{tarea.tarea}</span>
+                <button
+                    className='btn btnEditar'>
+                        EDITAR
+                </button>
+
+                <button
+                    className='btn btnBorrar'>
+                    BORRAR
+                </button>
             </div>    
         </>
     );
