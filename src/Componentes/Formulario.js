@@ -1,13 +1,13 @@
 export function Formulario (props){
 
-    const {tarea, handleSubmit, handlechange} = props
+    const {tarea, handleSubmit, handleChange} = props
 
     return(
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Introduce la tarea" 
-                onChange={handlechange}
+                onChange={handleChange}
                 value={tarea}
                 />
 

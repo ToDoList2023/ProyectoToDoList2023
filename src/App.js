@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import {Formulario} from '../src/Componentes/Formulario'
+import {Tarea} from '../src/Componentes/Tarea'
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
 
   }
 
-  function handlechange(e){
+  function handleChange(e){
     setTarea(e.target.value)
     console.log (tarea)
 
@@ -39,27 +40,30 @@ function App() {
 
   return (
     <>
-    <div className='contenedorPrincipal'>
-      <h1>To Do List</h1>
+      <div className='contenedorPrincipal'>
+        <h1>To Do List</h1>
 
-      <div className='contenedorFormulario'> 
-       <Formulario 
-       tarea= {tarea}
-       handleSubmit= {handleSubmit}
-       handlechange= {handlechange}/>
-
-      </div>
-      
-       <div className='contenedorTareas'>
-        <h2> Lista de Tareas</h2>
-        <div className='contenedorInfoTareas'>
-
+        <div className='contenedorFormulario'> 
+          <Formulario 
+          tarea= {tarea}
+          handleSubmit= {handleSubmit}
+          handleChange= {handleChange}/>
         </div>
-
-       </div>
-
-
-    </div>
+        
+        <div className='contenedorTareas'>
+          <h2> Lista de Tareas</h2>
+          <div className='contenedorInfoTareas'>
+            {
+              listadoTareas.map(tarea => (
+                <Tarea
+                key={tarea.id}
+                id={tarea.id}
+                tarea={tarea}/>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </>
   );
 }
