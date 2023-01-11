@@ -19,7 +19,7 @@ function App() {
 
   const nuevaTarea= {
     id: Date.now(),
-    terea: tarea,
+    tarea: tarea,
     completado: false
   }
 
