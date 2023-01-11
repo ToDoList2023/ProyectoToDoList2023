@@ -1,3 +1,18 @@
+:root {
+  --c-background:#FFFFFF;
+  --c-window: #B6BBD6;
+  --c-listado: #F4F4F4;
+  --c-casillero: #D9D9D9;
+  --c-btn-editar: #2AA4AC;
+  --c-btn-eliminar: #9B3F3F;
+  
+  --c-texto-title: #2B1887;
+  --c-texto-on: #000000;
+  --c-texto-off: #9E9A9A;
+  --letter: 'Lato', sans-serif;
+}
+
+
 .contenedorPrincipal {
   width: 100%;
   height: calc(100vh - 100px);
