@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import {Formulario} from '../src/Componentes/Formulario'
 import {Tarea} from '../src/Componentes/Tarea'
-import {agregarNuevaTarea, eliminarTarea, mostrarTareas } from '../src/services/serviceAxios'
+import {agregarNuevaTarea, editarTarea, eliminarTarea, mostrarTareas } from '../src/services/serviceAxios'
 
 function App() {
 
@@ -39,15 +39,9 @@ function handleChange(e){
 
 
 
-  function onActualizarTarea(objEditarTarea) {
-    const {id, tarea} = objEditarTarea
-
-    const temp = [...listadoTareas]
-    const elemento = temp.find(item => item.id === id)
-    elemento.tarea = tarea
-
-    setListadoTareas(temp)
-
+  async function onActualizarTarea(id, tarea, completado) {
+    await editarTarea(id, tarea, completado);
+    await obtenerTareas();
   }
 
   async function onBorrarTarea(id) {

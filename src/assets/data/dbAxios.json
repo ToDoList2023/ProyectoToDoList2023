@@ -2,7 +2,7 @@
   "tareas": [
     {
       "id": 1,
-      "tarea": "Pasear al perro",
+      "tarea": "Pasear a Rosita",
       "completado": false
     },
     {
@@ -16,7 +16,7 @@
       "completado": false
     },
     {
-      "tarea": "Resetear el ordenador",
+      "tarea": "Llevar el ordenador",
       "completado": false,
       "id": 5
     },
