@@ -34,9 +34,23 @@ function App() {
 
 function handleChange(e){
     setTarea(e.target.value)
-    console.log (tarea)
-
 }
+
+  function onActualizarTarea(objEditarTarea) {
+    const {id, tarea} = objEditarTarea
+
+    const temp = [...listadoTareas]
+    const elemento = temp.find(item => item.id === id)
+    elemento.tarea = tarea
+
+    setListadoTareas(temp)
+
+  }
+
+  function onBorrarTarea(id) {
+    const temp = listadoTareas.filter(item => item.id !== id)
+    setListadoTareas(temp)
+  }
 
   return (
     <>
@@ -58,7 +72,9 @@ function handleChange(e){
                 <Tarea
                   key={tarea.id}
                   id={tarea.id}
-                  tarea={tarea}/>
+                  tarea={tarea}
+                  onActualizarTarea={onActualizarTarea}
+                  onBorrarTarea={onBorrarTarea}/>
               ))
             }
           </div>
