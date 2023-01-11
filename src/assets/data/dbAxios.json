@@ -1,0 +1,39 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "tarea": "Pasear al perro",
+      "completado": false
+    },
+    {
+      "id": 2,
+      "tarea": "Organizar casa",
+      "completado": false
+    },
+    {
+      "id": 3,
+      "tarea": "Lavar ropa",
+      "completado": false
+    },
+    {
+      "tarea": "Resetear el ordenador",
+      "completado": false,
+      "id": 5
+    },
+    {
+      "tarea": "LLamar a mama",
+      "completado": false,
+      "id": 6
+    },
+    {
+      "tarea": "Limpiar",
+      "completado": false,
+      "id": 7
+    },
+    {
+      "tarea": "Dormir temprano",
+      "completado": false,
+      "id": 8
+    }
+  ]
+}
