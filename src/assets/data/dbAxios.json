@@ -34,6 +34,11 @@
       "tarea": "Dormir temprano",
       "completado": false,
       "id": 8
+    },
+    {
+      "tarea": "Revisar código",
+      "completado": false,
+      "id": 9
     }
   ]
 }

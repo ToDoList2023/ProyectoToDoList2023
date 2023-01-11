@@ -2,13 +2,11 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import {Formulario} from '../src/Componentes/Formulario'
 import {Tarea} from '../src/Componentes/Tarea'
-import {mostrarTareas} from '../src/services/serviceAxios'
+import {agregarNuevaTarea, mostrarTareas } from '../src/services/serviceAxios'
 
 function App() {
 
-  const [tarea, setTarea] = useState({
-    tarea: ""
-  });
+  const [tarea, setTarea] = useState('');
   const [listadoTareas, setListadoTareas] = useState ([])
 
   const obtenerTareas = async () => {
@@ -23,33 +21,23 @@ function App() {
 
   async function handleSubmit(e){
     e.preventDefault()
-    await obtenerTareas();
-    e.stopPropagation();
     
     if (tarea === '' ){
       alert('DEBES DE PONER UNA TAREA')
       return
     }
 
-
-  const nuevaTarea= {
-    id: Date.now(),
-    tarea: tarea,
-    completado: false
-  }
-
-  const temp = [nuevaTarea, ...listadoTareas]
-  setListadoTareas(temp)
-
-  setTarea('')
-
-  console.log(listadoTareas)
-
+    await agregarNuevaTarea(tarea);
+    setTarea('')
+    await obtenerTareas();
+    e.stopPropagation();
 }
 
 function handleChange(e){
     setTarea(e.target.value)
 }
+
+
 
   function onActualizarTarea(objEditarTarea) {
     const {id, tarea} = objEditarTarea
