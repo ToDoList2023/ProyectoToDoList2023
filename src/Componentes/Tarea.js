@@ -8,14 +8,16 @@ export function Tarea(props) {
 
     const [isChecked, setIsChecked] = useState(false);
 
-    const handleOnChange = () => {
-        setIsChecked(!isChecked);
-  };
-    
     function modoCompletado() {
         onActualizarTarea({ id: tarea.id, completado: !tarea.completado });
-
+  
     }
+
+    const handleOnChange = () => {
+        setIsChecked(!isChecked);
+        modoCompletado();
+  };
+    
 
     function ModoEdicionActivado() {
 
@@ -38,9 +40,7 @@ export function Tarea(props) {
                 <input
                     type="checkbox"
                     className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
-                    onClick={() => modoCompletado()}
-                    value={tarea.completado}
-                    checked={!isChecked}
+                    checked={isChecked}
                     onChange={handleOnChange}
                  />
                 <input
@@ -70,9 +70,7 @@ export function Tarea(props) {
                 <input
                     type="checkbox"
                     className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
-                    onClick={() => modoCompletado()}
-                    value={tarea.completado}
-                    checked={!isChecked}
+                    checked={isChecked}
                     onChange={handleOnChange}
                  />
                 <span

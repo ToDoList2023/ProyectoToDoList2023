@@ -1,11 +1,6 @@
 {
   "tareas": [
     {
-      "tarea": "LLamar a mamá",
-      "completado": false,
-      "id": 1
-    },
-    {
       "tarea": "Comprar",
       "completado": false,
       "id": 2
