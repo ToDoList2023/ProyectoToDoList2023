@@ -2,11 +2,12 @@
 
 
 ## Tabla de Contenido
-1. [Información General](#info-general)
-2. [Tecnologías](#tecnologías)
-3. [Instalación](#instalación)
+1. [Información General](#Info-General)
+2. [Tecnologías](#Tecnologías)
+3. [Instalación](#Instalación)
 4. [Prototipo](#Prototipo)
-5. [Recursos](#recursos)
+5. [Recursos](#Recursos)
+6. [Autoras](#Autoras)
 
 ### :notebook:Información General
 
@@ -18,10 +19,12 @@ ToDo List 2023 es, simplemente, una lista de cosas que hacer. En ella se apunta,
 ### :clapper:Tecnologías
 
 Una lista de tecnologías utilizadas en este projecto:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
-* [Library name](https://example.com): Version 1234
+* [Javascript](https://www.javascript.com/)
+* [css](https://www.w3schools.com/Css/)
+* [Axios](https://axios-http.com/es/)
+* [Json-server](https://www.npmjs.com/package/json-server)
+* [sweet alert](https://sweetalert.js.org/):
+
 
 ### :minidisc:Instalación
 
