@@ -37,17 +37,18 @@ export function Tarea(props) {
 
         return(
             <>
-                <input
-                    type="checkbox"
-                    className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
-                    checked={isChecked}
-                    onChange={handleOnChange}
-                 />
-                <input
-                    type="text"
-                    onChange={handleChange}
-                    value={valor} />
-
+                <div className="checkTarea">
+                    <input
+                        type="checkbox"
+                        className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
+                        checked={isChecked}
+                        onChange={handleOnChange}
+                    />
+                    <input
+                        type="text"
+                        onChange={handleChange}
+                        value={valor} />
+                </div>
                 <button
                     className="btn"
                     onClick={handleClick}>
@@ -67,28 +68,30 @@ export function Tarea(props) {
 
         return(
             <>
-                <input
-                    type="checkbox"
-                    className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
-                    checked={isChecked}
-                    onChange={handleOnChange}
-                 />
-                <span
-                className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}>
-                    {tarea.tarea}</span>
-                    <div className='botones'>
-                        <button
-                            className='btn btnEditar'
-                                onClick={() => setEditando(tarea.id)}>
-                                EDITAR
-                        </button>
+                <div className="checkTarea">
+                    <input
+                        type="checkbox"
+                        className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
+                        checked={isChecked}
+                        onChange={handleOnChange}
+                    />
+                    <span
+                    className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}>
+                        {tarea.tarea}</span>
+                </div>
+                <div className='botones'>
+                    <button
+                        className='btn btnEditar'
+                             onClick={() => setEditando(tarea.id)}>
+                            EDITAR
+                     </button>
 
-                        <button
-                            className='btn btnBorrar'
-                                onClick={() => onBorrarTarea(tarea.id)}>
-                                BORRAR
+                     <button
+                        className='btn btnBorrar'
+                             onClick={() => onBorrarTarea(tarea.id)}>
+                            BORRAR
                         </button>
-                    </div>
+                </div>
             </>
         );
     }

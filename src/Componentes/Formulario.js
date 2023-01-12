@@ -6,7 +6,7 @@ export function Formulario (props){
         <form onSubmit={handleSubmit}>
             <input 
                 type="text"
-                placeholder="Introduce la tarea" 
+                placeholder="   Introduce la tarea" 
                 onChange={handleChange}
                 value={tarea}
                 />

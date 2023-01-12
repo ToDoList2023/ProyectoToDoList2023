@@ -50,6 +50,20 @@ form {
   width: 100%;
 }
 
+.checkTarea {
+  display: flex;
+  flex-direction: left;
+
+}
+
+input[type="checkbox"] {
+  display:flex;
+  flex-direction:left;
+  align-items: left;
+  margin-right: 10px;
+  height: 20px;
+  }  
+
 input {
   margin: 0 10px;
   border: none;
@@ -152,7 +166,7 @@ input {
 }
 
 .todoTarea {
-  margin-right: 50px;
+  margin-left:10%;
 }
 
 .spanSubrayada {
