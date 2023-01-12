@@ -34,7 +34,7 @@ $ cd ../path/to/the/file
 $ npm install
 $ npm start
 ```
-También puedes hacer click [aquí](https://example.com) para entrar a nuestro sitio web.
+También puedes hacer click [aquí](https://to-do-list-beta-indol.vercel.app/) para entrar a nuestro sitio web.
 
 ### :movie_camera:Prototipo
 
