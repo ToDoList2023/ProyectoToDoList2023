@@ -39,8 +39,8 @@ function handleChange(e){
 
 
 
-  async function onActualizarTarea(id, tarea, completado) {
-    await editarTarea(id, tarea, completado);
+  async function onActualizarTarea({id, tarea, completado}) {
+    await editarTarea({id, tarea, completado});
     await obtenerTareas();
   }
 

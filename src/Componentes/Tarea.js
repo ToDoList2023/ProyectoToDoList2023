@@ -3,10 +3,8 @@ import { useState } from "react";
 export function Tarea(props) {
     
     const{tarea, onActualizarTarea, onBorrarTarea} = props
-
+    
     const [editando, setEditando] = useState(false)
-
-    const [estaCompletada, setEstaCompletada] = useState(false)
 
     function ModoEdicionActivado() {
 
@@ -17,17 +15,9 @@ export function Tarea(props) {
             setValor(text)
         }
 
-        function handleClick(e) {
+       async function handleClick(e) {
             e.preventDefault()
-
-            onActualizarTarea(
-                {
-                    id: tarea.id,
-                    tarea: valor,
-                    completado: false
-                }
-            )
-
+            await onActualizarTarea({id: tarea.id, tarea: valor})
             setEditando(false)
         }
 
@@ -54,11 +44,15 @@ export function Tarea(props) {
     }
 
     function ModoEdicionDesactivado() {
+        function modoCompletado() {
+            onActualizarTarea({ id: tarea.id, completado: !tarea.completado });
+
+        }
         return(
             <>
                 <span
-                className={estaCompletada ? "todoTarea spanSubrayada" : "todoTarea"}
-                onClick={() => setEstaCompletada(!estaCompletada)}>
+                className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
+                onClick={() => modoCompletado()}>
                     {tarea.tarea}</span>
                 <button
                     className='btn btnEditar'
