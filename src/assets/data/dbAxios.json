@@ -1,39 +1,14 @@
 {
   "tareas": [
     {
-      "id": 1,
-      "tarea": "Pasear al perro",
-      "completado": false
-    },
-    {
-      "id": 2,
-      "tarea": "Organizar casa",
-      "completado": false
-    },
-    {
-      "id": 3,
-      "tarea": "Lavar ropa",
-      "completado": false
-    },
-    {
-      "tarea": "Resetear el ordenador",
+      "tarea": "Salir a caminar",
       "completado": false,
-      "id": 5
+      "id": 1
     },
     {
-      "tarea": "LLamar a mama",
+      "tarea": "Llamar a mamá",
       "completado": false,
-      "id": 6
-    },
-    {
-      "tarea": "Limpiar",
-      "completado": false,
-      "id": 7
-    },
-    {
-      "tarea": "Dormir temprano",
-      "completado": false,
-      "id": 8
+      "id": 2
     }
   ]
 }
