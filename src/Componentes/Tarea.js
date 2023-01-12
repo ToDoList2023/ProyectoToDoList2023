@@ -6,7 +6,7 @@ export function Tarea(props) {
     
     const [editando, setEditando] = useState(false)
 
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(tarea.completado);
 
     function modoCompletado() {
         onActualizarTarea({ id: tarea.id, completado: !tarea.completado });
@@ -40,9 +40,10 @@ export function Tarea(props) {
                 <div className="checkTarea">
                     <input
                         type="checkbox"
-                        className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
+                        className={tarea.completado ? "todoTarea spanSubrayada contenedotTareaOpaco" : "todoTarea"}
                         checked={isChecked}
                         onChange={handleOnChange}
+                        value={tarea.completado}
                         id="checkbox"
                     />
                     <input
@@ -50,17 +51,20 @@ export function Tarea(props) {
                         onChange={handleChange}
                         value={valor} />
                 </div>
-                <button
-                    className="btn"
-                    onClick={handleClick}>
-                        GUARDAR
-                </button>
+                <div className="botones">
+                    <button
+                        className="btn btnEditar"
+                        onClick={handleClick}>
+                            GUARDAR
+                    </button>
 
-                <button
-                    className="btn btnBorrar"
-                    onClick={() => onBorrarTarea(tarea.id)}>
-                        BORRAR
-                </button>
+                    <button
+                        className="btn btnBorrar"
+                        onClick={() => onBorrarTarea(tarea.id)}>
+                            BORRAR
+                    </button>
+                </div>
+
             </>
         );
     }
@@ -75,6 +79,7 @@ export function Tarea(props) {
                         className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
                         checked={isChecked}
                         onChange={handleOnChange}
+                        value={tarea.completado}
                         id="checkbox"
                     />
                     <span
@@ -83,13 +88,13 @@ export function Tarea(props) {
                 </div>
                 <div className='botones'>
                     <button
-                        className='btn btnEditar'
+                        className={tarea.completado ? "btn btnEditar btnEditarCompletado" : "btn btnEditar"}
                              onClick={() => setEditando(tarea.id)}>
                             EDITAR
                      </button>
 
                      <button
-                        className='btn btnBorrar'
+                        className={tarea.completado ? "btn btnBorrar btnBorrarCompletado" : "btn btnBorrar"}
                              onClick={() => onBorrarTarea(tarea.id)}>
                             BORRAR
                         </button>
@@ -100,7 +105,7 @@ export function Tarea(props) {
 
     return(
         <>
-            <div className='contenedorTarea' id={tarea.id}>
+            <div className={tarea.completado ? "contenedorTarea contenedorTareaOpaco" : "contenedorTarea contenedorTareaClaro"} id={tarea.id}>
                 {
                     editando
                     ? <ModoEdicionActivado />

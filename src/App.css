@@ -7,6 +7,7 @@
   --c-btn-editar-tr:rgba(42, 164, 172, 0.7);
   --c-btn-eliminar: #9b3f3f;
   --c-btn-eliminar-tr: rgb(155, 63, 63, 0.9);
+  --c-casillero-bcg: #8e8b8b;
   
   --c-texto:#FFFFFF;
   --c-texto-title: #2B1887;
@@ -56,12 +57,28 @@ form {
 }
 
 #checkbox {
+  appearance: none;
+  background-color: var( --c-casillero);
+  cursor: pointer;
   display:flex;
   justify-content: flex-start;
   align-items: left;
   margin-right: 10px;
+  width: 20px;
   height: 20px;
+  border: 2px solid var( --c-casillero);
+  box-shadow: 1px 1px 5px 0.5px var(--c-casillero-bcg);
+  transition: background-color 0.3s ease-in-out;
+
 }  
+
+#checkbox:checked{
+  background-color: var( --c-casillero);
+  background-image: url("./assets/img/check.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 #crearTarea {
   margin: 0 10px;
@@ -95,6 +112,7 @@ form {
   flex-direction: column;
   aLign-items: center;
   color: var(--c-texto-title);
+  position: relative;
 }
 
 .btn {
@@ -114,25 +132,30 @@ form {
 }
 
 .btnEditar {
-  background-color: var(--c-btn-editar-tr);
+  background-color: var(--c-btn-editar);
   color: var(--c-texto);
   align-items: center;
   margin-right: 10px;
 }
 
 .btnEditar:hover {
-  background-color: var(--c-btn-editar);
   color: var(--c-texto);
 }
 
+.btnEditarCompletado{
+  background-color: var(--c-btn-editar-tr);
+}
+
 .btnBorrar {
-  background-color: var(--c-btn-eliminar-tr);
+  background-color: var(--c-btn-eliminar);
   color: var(--c-texto);
 }
 
 .btnBorrar:hover {
-  background-color: var(--c-btn-eliminar);
   transform: scale(1.1);
+}
+.btnBorrarCompletado{
+  background-color: var(--c-btn-eliminar-tr);
 }
 
 .contenedorInfoTareas {
@@ -140,12 +163,16 @@ form {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 80px;
 
 }
 
 .logotipo {
   display:flex;
   flex-direction: row;
+  position:absolute;
+  left: 5%;
+  
 }
 
 .icono {
@@ -159,7 +186,6 @@ form {
   font-size: 1.3em;
   display: flex;
   justify-content: space-between;
-  background-color: var(--c-casillero);
   border-radius: 15px;
   color:var(--c-texto-on);
 }
@@ -170,4 +196,12 @@ form {
 
 .spanSubrayada {
   text-decoration: line-through;
+  color: var(--c-texto-off);
+}
+
+.contenedorTareaClaro{
+  background-color: var(--c-listado);
+}
+.contenedorTareaOpaco{
+  background-color: var(--c-casillero);
 }

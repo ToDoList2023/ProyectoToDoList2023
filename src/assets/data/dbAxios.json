@@ -1,12 +1,12 @@
 {
   "tareas": [
     {
-      "tarea": "hola",
+      "tarea": "Salir a caminar",
       "completado": false,
       "id": 1
     },
     {
-      "tarea": "holacomoestas cuando nos vmos",
+      "tarea": "Llamar a mamá",
       "completado": false,
       "id": 2
     }
