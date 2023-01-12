@@ -1,14 +1,19 @@
 {
   "tareas": [
     {
-      "tarea": "LLamar a mamgga",
+      "tarea": "LLamar a mamá",
       "completado": false,
       "id": 6
     },
     {
-      "tarea": "kkhgig.  zz_____hgiuhouh",
+      "tarea": "Comprar",
       "completado": false,
       "id": 8
+    },
+    {
+      "tarea": "Quitarme los piojos",
+      "completado": false,
+      "id": 9
     }
   ]
 }

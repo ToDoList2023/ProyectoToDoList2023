@@ -3,8 +3,10 @@
   --c-window: #B6BBD6;
   --c-listado: #F4F4F4;
   --c-casillero: #D9D9D9;
-  --c-btn-editar: #2AA4AC;
-  --c-btn-eliminar: #9B3F3F;
+  --c-btn-editar: #2aa4ac;
+  --c-btn-editar-tr:rgba(42, 164, 172, 0.7);
+  --c-btn-eliminar: #9b3f3f;
+  --c-btn-eliminar-tr: rgb(155, 63, 63, 0.9);
   
   --c-texto:#FFFFFF;
   --c-texto-title: #2B1887;
@@ -80,7 +82,7 @@ input {
 }
 
 .btnEditar {
-  background-color: var(--c-btn-editar);
+  background-color: var(--c-btn-editar-tr);
   color: white;
   margin-right: 10px;
 }
@@ -91,7 +93,7 @@ input {
 }
 
 .btnBorrar {
-  background-color: var(--c-btn-eliminar);
+  background-color: var(--c-btn-eliminar-tr);
   color: white;
 }
 
