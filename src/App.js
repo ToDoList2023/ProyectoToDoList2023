@@ -3,6 +3,7 @@ import './App.css';
 import {Formulario} from '../src/Componentes/Formulario'
 import {Tarea} from '../src/Componentes/Tarea'
 import {agregarNuevaTarea, editarTarea, eliminarTarea, mostrarTareas } from '../src/services/serviceAxios'
+import icono from '../src/assets/img/icon.png'
 
 function App() {
 
@@ -61,7 +62,11 @@ function handleChange(e){
         </div>
         
         <div className='contenedorTareas'>
-          <h2> To-Do List </h2>
+          <span>
+          <img src={icono} alt="icon" /><h2> To-Do List </h2>
+          </span>
+        
+          
           <div className='contenedorInfoTareas'>
             {
               listadoTareas.map(tarea => (
