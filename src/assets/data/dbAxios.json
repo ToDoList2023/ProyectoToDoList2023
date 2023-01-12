@@ -1,3 +1,14 @@
 {
-  "tareas": []
+  "tareas": [
+    {
+      "tarea": "hola",
+      "completado": false,
+      "id": 1
+    },
+    {
+      "tarea": "holacomoestas cuando nos vmos",
+      "completado": false,
+      "id": 2
+    }
+  ]
 }
