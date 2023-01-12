@@ -2,7 +2,7 @@
   "tareas": [
     {
       "tarea": "Mamá",
-      "completado": false,
+      "completado": true,
       "id": 10
     },
     {

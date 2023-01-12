@@ -6,6 +6,19 @@ export function Tarea(props) {
     
     const [editando, setEditando] = useState(false)
 
+    const [isChecked, setIsChecked] = useState(false);
+
+    function modoCompletado() {
+        onActualizarTarea({ id: tarea.id, completado: !tarea.completado });
+  
+    }
+
+    const handleOnChange = () => {
+        setIsChecked(!isChecked);
+        modoCompletado();
+  };
+    
+
     function ModoEdicionActivado() {
 
         const [valor, setValor] = useState(tarea.tarea)
@@ -21,8 +34,15 @@ export function Tarea(props) {
             setEditando(false)
         }
 
+
         return(
             <>
+                <input
+                    type="checkbox"
+                    className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
+                    checked={isChecked}
+                    onChange={handleOnChange}
+                 />
                 <input
                     type="text"
                     onChange={handleChange}
@@ -44,15 +64,17 @@ export function Tarea(props) {
     }
 
     function ModoEdicionDesactivado() {
-        function modoCompletado() {
-            onActualizarTarea({ id: tarea.id, completado: !tarea.completado });
 
-        }
         return(
             <>
+                <input
+                    type="checkbox"
+                    className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
+                    checked={isChecked}
+                    onChange={handleOnChange}
+                 />
                 <span
-                className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
-                onClick={() => modoCompletado()}>
+                className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}>
                     {tarea.tarea}</span>
                     <div className='botones'>
                         <button
