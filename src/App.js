@@ -62,8 +62,8 @@ function handleChange(e){
         </div>
         
         <div className='contenedorTareas'>
-          <span>
-          <img src={icono} alt="icon" /><h2> To-Do List </h2>
+          <span className='logotipo'>
+          <img className= 'icono' src={icono} alt="icon" /><h2> To-Do List </h2>
           </span>
         
           

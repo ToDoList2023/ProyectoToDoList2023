@@ -4,18 +4,20 @@ export function Formulario (props){
 
     return(
         <form onSubmit={handleSubmit}>
-            <input
+            <input 
                 type="text"
                 placeholder="Introduce la tarea" 
                 onChange={handleChange}
                 value={tarea}
                 />
 
-            <input 
-            type="submit"
-            className="btn"
-            value="AGREGAR"
-            onClick={handleSubmit}/>
+            <button
+                type="submit"
+                className="btnAgregar"
+                value="AGREGAR"
+                onClick={handleSubmit}>
+                AGREGAR
+            </button>
         </form>
     );
 }

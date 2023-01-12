@@ -1,14 +1,19 @@
 {
   "tareas": [
     {
-      "tarea": "Quitarme los piojos",
-      "completado": false,
-      "id": 9
-    },
-    {
       "tarea": "Mamá",
       "completado": false,
       "id": 10
+    },
+    {
+      "tarea": "hola",
+      "completado": false,
+      "id": 11
+    },
+    {
+      "tarea": "hola",
+      "completado": false,
+      "id": 12
     }
   ]
 }
