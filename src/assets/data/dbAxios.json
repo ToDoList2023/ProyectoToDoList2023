@@ -9,6 +9,22 @@
       "tarea": "Mamá",
       "completado": false,
       "id": 10
+      "id": 8
+    },
+    {
+      "tarea": "Ir a estudiar",
+      "completado": false,
+      "id": 9
+    },
+    {
+      "tarea": "jnl",
+      "completado": false,
+      "id": 10
+    },
+    {
+      "tarea": "hola",
+      "completado": false,
+      "id": 11
     }
   ]
 }

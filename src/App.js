@@ -1,30 +1,43 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import {Formulario} from '../src/Componentes/Formulario'
-import {Tarea} from '../src/Componentes/Tarea'
-import {agregarNuevaTarea, editarTarea, eliminarTarea, mostrarTareas } from '../src/services/serviceAxios'
+import {Formulario} from '../src/Componentes/Formulario';
+import {Tarea} from '../src/Componentes/Tarea';
+import {agregarNuevaTarea, editarTarea, eliminarTarea, mostrarTareas } from '../src/services/serviceAxios';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
 import icono from '../src/assets/img/icon.png'
 
+const MySwal = withReactContent(Swal);
+
+ 
 function App() {
-
+  
   const [tarea, setTarea] = useState('');
-  const [listadoTareas, setListadoTareas] = useState ([])
-
+  const [listadoTareas, setListadoTareas] = useState ([]);
+  
   const obtenerTareas = async () => {
     const todasLasTareas = await mostrarTareas();
     setListadoTareas(todasLasTareas)
   }
-
+  
   useEffect(() => {
     obtenerTareas();
   }, []);
-
-
+  
+  
   async function handleSubmit(e){
+    
     e.preventDefault()
     
+    
     if (tarea === '' ){
-      alert('DEBES DE PONER UNA TAREA')
+      
+      MySwal.fire({       
+        title: <p>¡Debes poner una tarea!</p>,     
+        background: "#D9D9D9",        
+        confirmButtonColor: "#9B3F3F",        
+        allowOutsideClick: "true",     
+       });
       return
     }
 
