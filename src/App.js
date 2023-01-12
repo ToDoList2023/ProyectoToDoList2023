@@ -1,42 +1,53 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import {Formulario} from '../src/Componentes/Formulario'
 import {Tarea} from '../src/Componentes/Tarea'
+import {agregarNuevaTarea, editarTarea, eliminarTarea, mostrarTareas } from '../src/services/serviceAxios'
 
 function App() {
 
-  const [tarea, setTarea] = useState('')
+  const [tarea, setTarea] = useState('');
   const [listadoTareas, setListadoTareas] = useState ([])
 
-  function handleSubmit(e){
-    e.preventDefault()
+  const obtenerTareas = async () => {
+    const todasLasTareas = await mostrarTareas();
+    setListadoTareas(todasLasTareas)
+  }
 
+  useEffect(() => {
+    obtenerTareas();
+  }, []);
+
+
+  async function handleSubmit(e){
+    e.preventDefault()
+    
     if (tarea === '' ){
       alert('DEBES DE PONER UNA TAREA')
       return
     }
 
-
-  const nuevaTarea= {
-    id: Date.now(),
-    tarea: tarea,
-    completado: false
-  }
-
-  const temp = [nuevaTarea, ...listadoTareas]
-  setListadoTareas(temp)
-
-  setTarea('')
-
-  console.log(listadoTareas)
-
+    await agregarNuevaTarea(tarea);
+    setTarea('')
+    await obtenerTareas();
+    e.stopPropagation();
 }
 
 function handleChange(e){
     setTarea(e.target.value)
-    console.log (tarea)
-
 }
+
+
+
+  async function onActualizarTarea({id, tarea, completado}) {
+    await editarTarea({id, tarea, completado});
+    await obtenerTareas();
+  }
+
+  async function onBorrarTarea(id) {
+    await eliminarTarea(id)
+    await obtenerTareas();
+  }
 
   return (
     <>
@@ -58,7 +69,9 @@ function handleChange(e){
                 <Tarea
                   key={tarea.id}
                   id={tarea.id}
-                  tarea={tarea}/>
+                  tarea={tarea}
+                  onActualizarTarea={onActualizarTarea}
+                  onBorrarTarea={onBorrarTarea}/>
               ))
             }
           </div>
