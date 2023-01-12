@@ -52,7 +52,6 @@ function handleChange(e){
   return (
     <>
       <div className='contenedorPrincipal'>
-        <h1>To Do List</h1>
 
         <div className='contenedorFormulario'> 
           <Formulario 
