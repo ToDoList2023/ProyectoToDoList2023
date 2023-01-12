@@ -1,29 +1,14 @@
 {
   "tareas": [
     {
-      "id": 1,
-      "tarea": "Pasear a Rosita",
-      "completado": false
-    },
-    {
-      "id": 2,
-      "tarea": "Organizar casa",
-      "completado": false
-    },
-    {
-      "id": 3,
-      "tarea": "Lavar ropa",
-      "completado": false
-    },
-    {
-      "tarea": "Llevar una vela",
-      "completado": false,
-      "id": 5
-    },
-    {
-      "tarea": "LLamar a mama",
+      "tarea": "LLamar a mamgga",
       "completado": false,
       "id": 6
+    },
+    {
+      "tarea": "kkhgig.  zz_____hgiuhouh",
+      "completado": false,
+      "id": 8
     }
   ]
 }

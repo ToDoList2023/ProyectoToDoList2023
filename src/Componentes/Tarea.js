@@ -28,24 +28,6 @@ export function Tarea(props) {
                     onChange={handleChange}
                     value={valor} />
 
-<<<<<<< HEAD
-    
-    return(
-        <>
-            <div className='contenedorTarea' id={tarea.id}>
-                <span>{tarea.tarea}</span>
-                <div className='botones'>
-                    <button
-                        className='btn btnEditar'>
-                            EDITAR
-                    </button>
-
-                    <button
-                        className='btn btnBorrar'>
-                        BORRAR
-                    </button>
-                </div>
-=======
                 <button
                     className="btn"
                     onClick={handleClick}>
@@ -72,17 +54,19 @@ export function Tarea(props) {
                 className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
                 onClick={() => modoCompletado()}>
                     {tarea.tarea}</span>
-                <button
-                    className='btn btnEditar'
-                    onClick={() => setEditando(true)}>
-                        EDITAR
-                </button>
+                    <div className='botones'>
+                        <button
+                            className='btn btnEditar'
+                                onClick={() => setEditando(tarea.id)}>
+                                EDITAR
+                        </button>
 
-                <button
-                    className='btn btnBorrar'
-                    onClick={() => onBorrarTarea(tarea.id)}>
-                    BORRAR
-                </button>
+                        <button
+                            className='btn btnBorrar'
+                                onClick={() => onBorrarTarea(tarea.id)}>
+                                BORRAR
+                        </button>
+                    </div>
             </>
         );
     }
@@ -95,7 +79,6 @@ export function Tarea(props) {
                     ? <ModoEdicionActivado />
                     : <ModoEdicionDesactivado />
                 }
->>>>>>> 44e2c2083d800eb6271798e9dbd0adcb226e59a5
             </div>    
         </>
     );
