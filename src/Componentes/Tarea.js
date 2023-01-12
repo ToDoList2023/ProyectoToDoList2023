@@ -12,15 +12,17 @@ export function Tarea(props) {
         <>
             <div className='contenedorTarea' id={tarea.id}>
                 <span>{tarea.tarea}</span>
-                <button
-                    className='btn btnEditar'>
-                        EDITAR
-                </button>
+                <div className='botones'>
+                    <button
+                        className='btn btnEditar'>
+                            EDITAR
+                    </button>
 
-                <button
-                    className='btn btnBorrar'>
-                    BORRAR
-                </button>
+                    <button
+                        className='btn btnBorrar'>
+                        BORRAR
+                    </button>
+                </div>
             </div>    
         </>
     );

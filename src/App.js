@@ -51,7 +51,7 @@ function handleChange(e){
         </div>
         
         <div className='contenedorTareas'>
-          <h2> Lista de Tareas</h2>
+          <h2> To-Do List </h2>
           <div className='contenedorInfoTareas'>
             {
               listadoTareas.map(tarea => (
