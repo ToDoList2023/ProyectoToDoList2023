@@ -43,6 +43,7 @@ export function Tarea(props) {
                         className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
                         checked={isChecked}
                         onChange={handleOnChange}
+                        id="checkbox"
                     />
                     <input
                         type="text"
@@ -74,6 +75,7 @@ export function Tarea(props) {
                         className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
                         checked={isChecked}
                         onChange={handleOnChange}
+                        id="checkbox"
                     />
                     <span
                     className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}>

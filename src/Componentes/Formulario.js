@@ -9,6 +9,7 @@ export function Formulario (props){
                 placeholder="   Introduce la tarea" 
                 onChange={handleChange}
                 value={tarea}
+                id="crearTarea"
                 />
 
             <button

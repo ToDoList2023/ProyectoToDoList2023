@@ -55,15 +55,15 @@ form {
   flex-direction: left;
 }
 
-input[type="checkbox"] {
+#checkbox {
   display:flex;
-  flex-direction:left;
+  justify-content: flex-start;
   align-items: left;
   margin-right: 10px;
   height: 20px;
 }  
 
-input {
+#crearTarea {
   margin: 0 10px;
   border: none;
   border-radius: 10px;
@@ -115,19 +115,19 @@ input {
 
 .btnEditar {
   background-color: var(--c-btn-editar-tr);
-  color: white;
+  color: var(--c-texto);
   align-items: center;
   margin-right: 10px;
 }
 
 .btnEditar:hover {
   background-color: var(--c-btn-editar);
-  color: white
+  color: var(--c-texto);
 }
 
 .btnBorrar {
   background-color: var(--c-btn-eliminar-tr);
-  color: white;
+  color: var(--c-texto);
 }
 
 .btnBorrar:hover {
@@ -153,7 +153,7 @@ input {
 }
 
 .contenedorTarea {
-  width: 80%;
+  width: 90%;
   margin: 10px 0;
   padding: 10px;
   font-size: 1.3em;
@@ -165,7 +165,7 @@ input {
 }
 
 .todoTarea {
-  margin-left:10%;
+  margin-left:10px;
 }
 
 .spanSubrayada {
