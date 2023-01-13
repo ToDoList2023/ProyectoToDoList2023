@@ -152,6 +152,7 @@ form {
 
 .btnBorrar:hover {
   transform: scale(1.1);
+  background-color: var(--c-btn-eliminar);
 }
 
 .btnBorrarCompletado{
