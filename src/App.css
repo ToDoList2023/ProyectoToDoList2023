@@ -69,7 +69,6 @@ form {
   border: 2px solid var( --c-casillero);
   box-shadow: 1px 1px 5px 0.5px var(--c-casillero-bcg);
   transition: background-color 0.3s ease-in-out;
-
 }  
 
 #checkbox:checked{
@@ -154,6 +153,7 @@ form {
 .btnBorrar:hover {
   transform: scale(1.1);
 }
+
 .btnBorrarCompletado{
   background-color: var(--c-btn-eliminar-tr);
 }
@@ -164,7 +164,6 @@ form {
   align-items: center;
   flex-direction: column;
   margin-top: 80px;
-
 }
 
 .logotipo {
@@ -172,7 +171,6 @@ form {
   flex-direction: row;
   position:absolute;
   left: 5%;
-  
 }
 
 .icono {
@@ -202,6 +200,7 @@ form {
 .contenedorTareaClaro{
   background-color: var(--c-listado);
 }
+
 .contenedorTareaOpaco{
   background-color: var(--c-casillero);
 }

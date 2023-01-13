@@ -76,7 +76,7 @@ export function Tarea(props) {
                 <div className="checkTarea">
                     <input
                         type="checkbox"
-                        className={tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
+                        className= {tarea.completado ? "todoTarea spanSubrayada" : "todoTarea"}
                         checked={isChecked}
                         onChange={handleOnChange}
                         value={tarea.completado}
