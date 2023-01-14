@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-
+let url = 'http://localhost:5008/tareas';
 const mostrarTareas = async () => {
-    const respuesta = await axios.get('http://localhost:5000/tareas')
+    const respuesta = await axios.get(url)
     return respuesta.data;
 }
 
 const agregarNuevaTarea = async (tarea) => {
-    const respuesta = await axios.post('http://localhost:5000/tareas', { tarea: tarea, completado: false});
+    const respuesta = await axios.post(url, { tarea: tarea, completado: false});
     return respuesta.data.json;
 }
 
@@ -20,12 +20,12 @@ const editarTarea = async ({id, tarea, completado}) => {
         peticion.completado = completado;
     }
    
-    const respuesta = await axios.patch(`http://localhost:5000/tareas/${id}`, {tarea: tarea, completado: completado});
+    const respuesta = await axios.patch(`url/${id}`, {tarea: tarea, completado: completado});
     return respuesta;
 }
 
 const eliminarTarea = async(id) => {
-    const respuesta = await axios.delete(`http://localhost:5000/tareas/${id}`);
+    const respuesta = await axios.delete(`url/${id}`);
     return respuesta;
 }
 
