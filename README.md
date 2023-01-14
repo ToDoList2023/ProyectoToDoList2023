@@ -33,7 +33,7 @@ $ git clone [ToDoList2023](https://github.com/ToDoList2023/ProyectoToDoList2023)
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
-$ npm run to-do
+$ npm run ToDo
 ```
 También puedes hacer click [aquí](https://to-do-list-beta-indol.vercel.app/) para entrar a nuestro sitio web.
 
