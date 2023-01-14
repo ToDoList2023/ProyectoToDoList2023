@@ -10,7 +10,7 @@
     "json-server": "^0.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "sweetalert2": "^11.7.0",
     "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ToDo": "json-server --watch src/assets/data/dbAxios.json --port 5008"
+    "todo": "json-server --watch src/assets/data/dbAxios.json --port 5008"
   },
   "eslintConfig": {
     "extends": [
