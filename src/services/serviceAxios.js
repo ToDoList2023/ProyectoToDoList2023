@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let url = 'http://localhost:5008/tareas';
+const url = 'https://todolist-api-zdjd.onrender.com/tareas';
 const mostrarTareas = async () => {
     const respuesta = await axios.get(url)
     return respuesta.data;
@@ -20,12 +20,12 @@ const editarTarea = async ({id, tarea, completado}) => {
         peticion.completado = completado;
     }
    
-    const respuesta = await axios.patch(`url/${id}`, {tarea: tarea, completado: completado});
+    const respuesta = await axios.patch(`${url}/${id}`, {tarea: tarea, completado: completado});
     return respuesta;
 }
 
 const eliminarTarea = async(id) => {
-    const respuesta = await axios.delete(`url/${id}`);
+    const respuesta = await axios.delete(`${url}/${id}`);
     return respuesta;
 }
 
