@@ -22,7 +22,7 @@ Una lista de tecnologías utilizadas en este projecto:
 * [css](https://www.w3schools.com/Css/)
 * [Axios](https://axios-http.com/es/)
 * [Json-server](https://www.npmjs.com/package/json-server)
-* [sweet alert](https://sweetalert.js.org/):
+* [sweet alert](https://sweetalert.js.org/)
 
 
 ### :minidisc:Instalación
@@ -33,6 +33,7 @@ $ git clone [ToDoList2023](https://github.com/ToDoList2023/ProyectoToDoList2023)
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
+$ npm run ToDo
 ```
 También puedes hacer click [aquí](https://to-do-list-beta-indol.vercel.app/) para entrar a nuestro sitio web.
 
@@ -42,9 +43,9 @@ También puedes hacer click [aquí](https://to-do-list-beta-indol.vercel.app/) p
 * [Pantalla Telefono Móvil](https://www.figma.com/proto/QJNw4XKufx7OgwqloWiqN6/ProyectoToDoList2023?node-id=10%3A5&scaling=scale-down&page-id=10%3A4&starting-point-node-id=10%3A5)
 
 ### Autoras
-* [Elvia](https://github.com/ElviaBth):
-* [Iris](https://github.com/mauisiri):
-* [Karo](https://github.com/KaroVillarraga):
-* [Luisa](https://github.com/LuisaVAZ):
+* [Elvia](https://github.com/ElviaBth)
+* [Iris](https://github.com/mauisiri)
+* [Karo](https://github.com/KaroVillarraga)
+* [Luisa](https://github.com/LuisaVAZ)
 
 
